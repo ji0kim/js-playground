@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>연속으로 계산하기</h1>
+    <h2>결과</h2>
+    <div id="results">
+        
+    </div>
+    <style>
+        input {
+            border-width: 1px;
+        }
+    </style>
+
+    <script>
+        
+        function calculate (){
+            var Num1 = Number(prompt('숫자를 입력하세요1'));
+            var result = Num1;
+            
+            str = '';
+            str += Num1;
+            
+            while(true){
+                var op = prompt('연산자를 입력하세요');
+                if (op === 'quit') {
+                    break;
+                }
+                n = 2;
+                n++; 
+                var Num2 = Number(prompt(n+'번째 숫자를 입력하세요'));
+                if (op === '/') {
+                    result /= Num2;
+                    str += '/' + Num2;
+                    console.log(str);
+                } else if (op === '*') {
+                    result *= Num2;
+                    str += '*' + Num2;
+                } else if (op === '+') {
+                    result += Num2;
+                    str += '+' + Num2;
+                } else if (op === '-') {
+                    result -= Num2;
+                    str += '-' + Num2;
+                } else {
+                    result = "중간오류";
+                    break;
+                }
+            } 
+            document.write (str + "<br>"); 
+            document.write ("최종 결과는 " + result + "입니다.");
+        }
+        console.log(results);
+        calculate();
+    </script>
+</body>
+</html>
