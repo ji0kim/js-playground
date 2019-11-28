@@ -13,6 +13,9 @@
           <li> 첫번째 수
              <input id = number1 type="text">
           </li>
+          <li> + - * / 중 하나를 입력하세요
+                <input id = operator type="text">
+             </li>
           <li> 두번째 수
                 <input id = number2 type="text">
           </li>
@@ -41,11 +44,23 @@
 
     calculator.calculate = function (n1, n2){
         calculator.str = "";
-        this.str += "곱하기 : " + (n1 * n2) + "<br>";
-        this.str += "나누기 : " + (n1 / n2) + "<br>";
-        this.str += "더하기 : " + (n1 + n2) + "<br>";
-        this.str += "빼기 : " + (n1 - n2) + "<br>";
-        document.getElementById("results").innerHTML = this.str;
+        var op = (document.getElementById("operator").value);
+        switch(op) {
+            case "*" : this.str += "곱하기 : " + (n1 * n2) + "<br>";
+            document.getElementById("results").innerHTML = this.str;
+            break;
+            case "/" : this.str += "나누기 : " + (n1 / n2) + "<br>";
+            document.getElementById("results").innerHTML = this.str;
+            break;
+            case "+" : this.str += "더하기 : " + (n1 + n2) + "<br>";
+            document.getElementById("results").innerHTML = this.str;
+            break;
+            case "-" :  this.str += "빼기 : " + (n1 - n2) + "<br>";
+            document.getElementById("results").innerHTML = this.str;
+            break;
+            default : this.str += "잘못 입력하셨습니다";
+            document.getElementById("results").innerHTML = this.str;
+        }
     }
 
    
