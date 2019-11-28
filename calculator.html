@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>사칙연산</h1>
+    <div>
+      <ul>
+          <li> 첫번째 수
+             <input id = number1 type="text">
+          </li>
+          <li> 두번째 수
+                <input id = number2 type="text">
+          </li>
+      </ul>
+    </div>
+    <div>
+        <input type="button" id="button1" onclick="button1_click();" value="실행"/>      
+    </div>
+    <h2>결과</h2>
+        <div id = results>
+            
+        </div>
+    
+
+     
+
+<style>
+    input {
+            border-width : 1px;
+        }
+</style>
+
+
+<script>
+    calculator = {};
+
+    calculator.calculate = function (n1, n2){
+        calculator.str = "";
+        this.str += "곱하기 : " + (n1 * n2) + "<br>";
+        this.str += "나누기 : " + (n1 / n2) + "<br>";
+        this.str += "더하기 : " + (n1 + n2) + "<br>";
+        this.str += "빼기 : " + (n1 - n2) + "<br>";
+        document.getElementById("results").innerHTML = this.str;
+    }
+
+   
+    function main (){
+        var n1 = Number(document.getElementById("number1").value);
+        var n2 = Number(document.getElementById("number2").value);
+        calculator.calculate(n1, n2);
+        
+    }
+    
+   function button1_click() {
+             main();
+           }
+
+    </script>
+</body>
+</html>
