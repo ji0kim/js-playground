@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수로 구구단 만들기</h1>
+    <script>
+
+        // function calculate(x){
+        //     for(var i = 1; i <= 9; i++){
+        //         var results = [];
+        //         results[i] = x * i;
+        //     }
+        // } 
+              
+        //     function gugudan(n){
+        //         for (var n = 2; n <= 9; n++){
+        //         results = calculate (x) 
+        //         }
+        //     }
+    
+        
+        // function printResults(x){
+        //     document.write("<h2>" +  x  + " 단 </h2> ")
+        //     for (var i = 1; i <=9; i++){
+        //         var y = x * i
+        //     }
+           
+        // }
+        
+        function calculateNDan(n){
+            var ret = [];
+            for (var i = 1; i <= 9; i++){
+                ret[i] = n * i;
+            } 
+            return ret;
+        }
+
+        function printResult(n, ret){
+            console.log("printResult working");
+            for (var i = 1; i <= 9; i++){
+             var y = n * i;
+             document.write ( n + " * " + i + " = " + y + "<br>");
+            }
+        }
+
+        function main(){
+            console.log ("main함수가 실행되었습니다");//정의와 호출이 나눠져있음.
+           //for (var n = 2; n <= 9; n++);{
+                var n = 2;
+                var results = calculateNDan(n);
+                printResult(n, ret);
+            }
+      //}
+        main();
+
+
+
+
+
+    </script>
+</body>
+</html>

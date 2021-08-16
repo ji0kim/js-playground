@@ -11,13 +11,13 @@
     <div>
       <ul>
           <li> 첫번째 수
-             <input id = number1 type="text">
+            <input id = number1 type="text">
           </li>
           <li> + - * / 중 하나를 입력하세요
-                <input id = operator type="text">
+            <input id = operator type="text">
              </li>
           <li> 두번째 수
-                <input id = number2 type="text">
+            <input id = number2 type="text">
           </li>
       </ul>
     </div>
@@ -25,23 +25,17 @@
         <input type="button" id="button1" onclick="button1_click();" value="실행"/>      
     </div>
     <h2>결과</h2>
-        <div id = results>
-            
-        </div>
-    
-
-     
-
+    <div id = results>
+    </div>
+ 
 <style>
     input {
             border-width : 1px;
         }
 </style>
 
-
 <script>
     calculator = {};
-
     calculator.calculate = function (n1, n2){
         calculator.str = "";
         var op = (document.getElementById("operator").value);
@@ -62,19 +56,14 @@
             document.getElementById("results").innerHTML = this.str;
         }
     }
-
-   
     function main (){
         var n1 = Number(document.getElementById("number1").value);
         var n2 = Number(document.getElementById("number2").value);
         calculator.calculate(n1, n2);
-        
     }
-    
    function button1_click() {
              main();
            }
-
     </script>
 </body>
 </html>

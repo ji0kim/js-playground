@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     
+        <script>
+                var n = prompt("몇단을 출력할까?")
+                var n = Number(n);
+                document.write("구구단" + n +"단 구하기" + "<br>")
+                for (var i = 1; i <= 9; ++i){
+                    var mX = n * (i);
+                    console.log(n + "*"+ i + "=" + mX);
+                    document.write( n + "*" + i + "=" + mX +"<br>");
+               }
+            </script>
+</body>
+</html>

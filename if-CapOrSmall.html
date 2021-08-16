@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        대분자냐 소문자냐 아니면 섞어썼냐
+    </h1>
+    <script>
+        var sentence = prompt("영어문장을 넣어줘");
+        var uSentence = sentence.toUpperCase();
+        var lSentence = sentence.toLowerCase();
+
+       
+       if (sentence === uSentence){
+           alert("This is the uppercase sentence")
+       } else if(sentence === lSentence){
+           alert("This is the lowercase sentence")
+       } else{
+           alert("this is basic sentence")
+       }
+
+
+      /*
+      string.toUppercase();------> doesn't require parameter
+*/
+    </script>
+</body>
+</html>
